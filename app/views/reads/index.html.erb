@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+  <center>
+    <h1>Here are the top 10 Hot Reads</h1>
+  </center>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>URL</th>
+    </tr>
+    <% @top_reads.each do |read| %>
+    <tr>
+      <td><%= read.title %></td>
+      <td><%= read.url %></td>
+    </tr>
+    <% end %>
+  </table>
+</body>
+</html>
